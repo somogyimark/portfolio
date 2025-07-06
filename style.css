@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body {
+    position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +30,8 @@ body {
 }
 
 h1 {
+    position: relative;
+    z-index: 1;
   font-family: 'Audiowide', cursive;
   font-size: 7vw;
   background: linear-gradient(90deg, #ff3cac, #784ba0, #2b86c5, #00d2ff);
