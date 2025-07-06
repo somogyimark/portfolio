@@ -1,10 +1,62 @@
-h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    -45deg,
+    #ff3cac,
+    #784ba0,
+    #2b86c5,
+    #00d2ff,
+    #7ee8fa,
+    #eec0c6,
+    #ffafbd,
+    #ffc3a0,
+    #ff9a9e,
+    #fad0c4,
+    #a1c4fd,
+    #c2e9fb
+  );
+  background-size: 5000% 5000%;
+  animation: gradientBG 60s linear infinite;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 7vw;
+  background: linear-gradient(90deg, #ff3cac, #784ba0, #2b86c5, #00d2ff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 8s ease-in-out infinite, floatText 4s ease-in-out infinite;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+/* Háttér animáció */
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Színátmenet animáció a szövegben */
+@keyframes colorShift {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+/* Lebegő mozgás animáció */
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
